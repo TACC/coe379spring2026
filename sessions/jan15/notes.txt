@@ -47,6 +47,17 @@ So you could create your work in HOME but if you put
 it in STOCKYARD, it makes it easier to move between clusters.
 Up to you.
 
+==== Git
+
+If you create a private repository:
+- use the `ssh', not the `https' link
+Before you can clone on frontera:
+- add your public key to github.com:
+- if you don't have a `.ssh' directory, run ssh-keygen
+- copy the contents of id_rsa.pub and add it to github:
+- go to your global settings, not repo settings
+- under `ssh & gpg keys' create a new key, name it after frontera
+
 ==== Unix-isms
 
 Commands today:
