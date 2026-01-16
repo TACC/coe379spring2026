@@ -47,3 +47,20 @@ So you could create your work in HOME but if you put
 it in STOCKYARD, it makes it easier to move between clusters.
 Up to you.
 
+==== Unix-isms
+
+Commands today:
+- hostname : name of the machine you're on
+- who : who is on this machine
+- wc : `word count'
+
+idiom:
+
+who | wc -l # count how many people are on this machine
+
+Command history:
+
+!foo : last commandline that started with `foo'
+!?foo? : last commandline that contained `foo'
+!foo:p : display last commandline &c
+!! : repeat previous command, for instance after you used the :p option
