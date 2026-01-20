@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#SBATCH -J myjob           # Job name
+#SBATCH -o myjob.o%j       # Name of stdout output file
+#SBATCH -e myjob.o%j       # Name of stderr error filee
+#SBATCH -p development
+#SBATCH -N 4
+#SBATCH -n 16
+#SBATCH -t 0:3:00        # Run time (hh:mm:ss)
+#SBATCH -A YOURACCOUNTHERE
+
+# Any other commands must follow all #SBATCH directives...
+pwd
+date
+
+# Launch serial code...
+ibrun hostname
+

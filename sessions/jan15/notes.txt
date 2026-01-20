@@ -1,0 +1,77 @@
+
+==== User guide
+
+It's a good idea to find the frontera user guide
+and read through it.
+
+tacc.utexas.edu > systems > frontera > user guide
+
+==== Login & compute nodes
+
+When you login:
+
+ssh yourname@frontera.tacc.utexas.edu
+
+you wind up on a `login node':
+
+login1.frontera.tacc.utexas.edu # or 2,3,4
+
+You share this with many other users so don't run production.
+Instead:
+
+idev # interactive compute node
+
+We demonstrated the use of a jobscript
+
+sbatch jobscript # batch job
+squeue -u yourname # see status
+watch squeue -u yourname # see status updated every 2 seconds
+
+The jobscript needs your project account. Use: ASC25001
+
+To see all your account information:
+
+/usr/local/etc/taccinfo
+
+==== File systems
+
+Frontera has three file systems:
+- $HOME : small, but permanent and nightly backed up
+- $WORK : big, permanent, not backed up
+- $SCRATCH : big, regularly purged
+
+The WORK file system is actually `$STOCKYARD/frontera':
+`STOCKYARD' is available on each cluster.
+
+So you could create your work in HOME but if you put
+it in STOCKYARD, it makes it easier to move between clusters.
+Up to you.
+
+==== Git
+
+If you create a private repository:
+- use the `ssh', not the `https' link
+Before you can clone on frontera:
+- add your public key to github.com:
+- if you don't have a `.ssh' directory, run ssh-keygen
+- copy the contents of id_rsa.pub and add it to github:
+- go to your global settings, not repo settings
+- under `ssh & gpg keys' create a new key, name it after frontera
+
+==== Unix-isms
+
+Commands today:
+- hostname : name of the machine you're on
+- who : who is on this machine
+- wc : `word count'
+
+idiom:
+
+who | wc -l # count how many people are on this machine
+
+Command history:
+
+!foo : last commandline that started with `foo'
+!?foo? : last commandline that contained `foo'
+!foo:p : display last commandline &c
+!! : repeat previous command, for instance after you used the :p option
