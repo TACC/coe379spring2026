@@ -1,0 +1,47 @@
+================ In class:
+
+- go into the exercises-mpi-xxx directory
+  where xxx is your favorite flavor
+- do "idev" to get an interactive node
+
+idev -N 2 -n 12 # 2 nodes, 12 cores total
+
+For class: 
+
+idev -m 70 # 70 minutes
+
+If there is a reservation, use it.
+If there is no reservation, you may have to wait for an interactive node.
+
+================ Languages
+
+MPI has interfaces for the following languages:
+C - defined by the standard
+Fortran - defined by the standard
+Python - 3rd party project
+C++ (1) you can use the C interface
+    (2) you can the C++ interface from MPL
+
+These directories exist:
+
+exercises-mpi-c : use the C language
+exercises-mpi-p : python
+exercises-mpi-f08 : fortran
+exercises-mpi-cxx : use C++ but with the C interface to MPI
+exercises-mpi-mpl : use C++ with the C++ interface from MPL
+
+================ MPL
+
+On frontera, do
+
+module load intel/23
+module load mpl
+
+to get MPL available.
+
+If you now do 
+
+module save 
+
+you automatically get them next time you log in.
+
