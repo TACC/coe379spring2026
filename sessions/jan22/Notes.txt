@@ -30,3 +30,6 @@ Obviously you should do the same thing
 to make sure your submission works.
 However, do not submit your build directory
 or other temporaries & binaries.
+
+To get you started there are 3 example directories
+here with cmake setup files.
