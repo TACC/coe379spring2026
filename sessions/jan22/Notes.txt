@@ -1,0 +1,35 @@
+================ CMake
+
+For your homeworks you need to create folders with solely:
+
+- your sources
+- a CMakeLists.txt file 
+
+with this, your instructor will do this:
+
+- we pull updates of your repo
+- then we do the following sequence:
+
+## for C:
+rm -rf build # delete build directory if any
+mkdir build  # make build directory
+cd build     # go there
+CC=${TACC_CC} cmake ../hw-in-c
+make
+ibrun your_executable
+
+## for C++ (both cxx & mpl)
+rm -rf build
+mkdir build
+cd build
+CXX=${TACC_CXX} cmake ../hw-with-mpl # or cxx
+make
+ibrun your_executable
+
+Obviously you should do the same thing
+to make sure your submission works.
+However, do not submit your build directory
+or other temporaries & binaries.
+
+To get you started there are 3 example directories
+here with cmake setup files.
