@@ -16,6 +16,9 @@ using namespace std;
 
 int main(int argc,char **argv) {
 
+  const mpl::communicator &comm_world =
+    mpl::environment::comm_world();
+
   cout << "hello world\n";
   
   return 0;
