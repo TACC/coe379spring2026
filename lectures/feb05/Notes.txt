@@ -1,0 +1,16 @@
+================ Random comments
+
+Please do not quit your editor every time you compile:
+- use Control-z to suspend the editor process
+- do `fg' on the commandline to foreground the editor again
+
+MPI is machine independent:
+- your favorite package manager probably has a `mpich' port
+- you can download the "reference implementation" from mpich.org and compile it yourself.
+
+The makefile in exercises/exercises-mpi-whatever has an option:
+
+make whatever ECHO=1
+
+shows you precisely what it does.
+The `tools.c' file is used in some exercises for the final check.

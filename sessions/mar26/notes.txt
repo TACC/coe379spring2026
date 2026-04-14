@@ -1,0 +1,33 @@
+================ totally minimal intro to shell scripting
+
+variables:
+
+x=5 # no spaces!
+echo $x
+
+loops:
+
+for x in 3 4 5 ; do echo $x ; done
+
+generate input files:
+
+for x in 3 4 5 ; do echo $x > input$x ; done
+
+sequence of numbers:
+
+seq 5 10
+
+use that sequence in a loop:
+
+for x in $( seq 5 10 ) ; do echo $x > input$x ; done
+
+(explanation: stuff in
+
+$( ... )
+
+is executed, then output insertedin the outer command.
+
+Now suppose you have a variable n, how do you get n-1?
+
+$(seq 0 $(( n-1 )) )
+
