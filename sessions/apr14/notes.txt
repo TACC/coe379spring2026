@@ -1,0 +1,22 @@
+Use script.sh to build the executable.
+
+Run:
+
+build/readvalue value.txt
+
+Problem: 
+
+that file is in another directory so it's not found,
+and the program will segfault.
+
+Debugging:
+
+call:
+
+gdb build/readvalue
+
+and then 
+
+run value.txt
+
+Now you can use gdb commands to inspect your code.
